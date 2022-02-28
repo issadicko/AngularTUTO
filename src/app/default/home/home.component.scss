@@ -1,0 +1,9 @@
+
+.product-listing{
+  display: flex;
+
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}

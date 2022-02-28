@@ -1,0 +1,24 @@
+
+
+<div *ngIf="product !== undefined" class="product-item">
+
+  <div>
+    <img [src]="product.image" alt="">
+  </div>
+
+  <div class="product-price">
+    {{ product.price | number: '': 'fr-FR'}}
+  </div>
+
+  <div class="text-center">
+    <h4>{{ product.name }}</h4>
+  </div>
+
+
+  <div>
+    <button (click)="handleAddToCart()" class="btn btn-sm btn-primary">
+      <fa-icon [icon]="faCart" class="me-2"></fa-icon> Ajouter au panier
+    </button>
+  </div>
+
+</div>

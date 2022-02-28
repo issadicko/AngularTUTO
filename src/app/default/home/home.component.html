@@ -1,0 +1,19 @@
+
+
+<div fxLayout="row" class="mt-5">
+  <div>
+    <h3>Bienvenu dans la fraiche Boutique</h3>
+  </div>
+  <span class="spacer"></span>
+  <div>
+    <h4>
+      Panier : {{ (cart$ | async)?.length }}
+    </h4>
+  </div>
+</div>
+
+<hr>
+
+<div class="product-listing mb-5">
+  <app-product-item  [product]="product" *ngFor="let product of products"></app-product-item>
+</div>

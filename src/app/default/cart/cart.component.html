@@ -1,0 +1,26 @@
+
+
+
+<h2 class="mt-5">Panier</h2>
+
+<hr>
+
+<ul class="cart-list">
+  <li *ngFor="let item of items | async; let i = index;">
+
+    <div class="cart-list-item">
+      <div fxLayout="row" class="align-items-center" fxLayoutGap="10px">
+        <img src="{{ item.product.image }}" height="50px" width="50px" alt=""><strong>{{item.product.name}}</strong>
+      </div>
+      <div>
+        Quantité: {{item.quantity}}
+      </div>
+      <div>
+        <button (click)="handleRemove(i)" class="btn-sm btn btn-danger">
+          Retirer
+        </button>
+      </div>
+    </div>
+
+  </li>
+</ul>
